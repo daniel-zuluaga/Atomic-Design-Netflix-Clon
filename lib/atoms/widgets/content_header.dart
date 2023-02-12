@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:micro_app_netflix_clon/atoms/widgets/widgets.dart';
+import 'package:micro_app_netflix_clon/foundations/colors_foundation.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:video_player/video_player.dart';
 
@@ -79,19 +80,19 @@ class _CustomContentHeaderMobile extends StatelessWidget {
                 label: const Text(
                   "Play",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: iconColor,
                     fontWeight: FontWeight.w600,
                     fontSize: 20
                   ),
                 ),
-                icon: const Icon(Icons.play_arrow_rounded, color: Colors.black,),
+                icon: const Icon(Icons.play_arrow_rounded, color: iconColor,),
                 onPressed: (){
                   final Content contentUrl = featuredContent;
                   launchUrlString(contentUrl.urlInternetTrailer!);
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    Colors.white
+                    h1Color
                   )
                 ),
               ),
@@ -199,12 +200,12 @@ class _CustomContentHeaderDesktopState extends State<_CustomContentHeaderDesktop
                 Text(
                   widget.featuredContent.description!,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: h1Color,
                     fontSize: 18.0,
                     fontWeight: FontWeight.w500,
                     shadows: [
                       Shadow(
-                        color: Colors.black,
+                        color: shadowsColor,
                         offset: Offset(2.0, 4.0),
                         blurRadius: 6.0,
                       ),
@@ -221,17 +222,17 @@ class _CustomContentHeaderDesktopState extends State<_CustomContentHeaderDesktop
                       },
                       icon: const Icon(
                         Icons.play_arrow_rounded,
-                        color: Colors.black,
+                        color: iconColor,
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          Colors.white
+                          h1Color
                         )
                       ),
                       label: const Text(
                         'Play',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: textColor,
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -242,13 +243,13 @@ class _CustomContentHeaderDesktopState extends State<_CustomContentHeaderDesktop
                       onTap: (){},
                       childButton: const Icon(
                         Icons.play_arrow_rounded,
-                        color: Colors.black,
+                        color: iconColor,
                       ),
-                      colorButton: Colors.white,
+                      colorButton: buttonColor,
                       labelButton: const Text(
                         'More Info',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: textColor,
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -260,7 +261,7 @@ class _CustomContentHeaderDesktopState extends State<_CustomContentHeaderDesktop
                         icon: Icon(
                           _isMuted ? Icons.volume_off : Icons.volume_up,
                         ),
-                        color: Colors.white,
+                        color: iconColorDefault,
                         iconSize: 30.0,
                         onPressed: () => setState(() {
                           _isMuted

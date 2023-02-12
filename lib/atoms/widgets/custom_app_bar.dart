@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:micro_app_netflix_clon/atoms/widgets/widgets.dart';
+import 'package:micro_app_netflix_clon/foundations/colors_foundation.dart';
 
 class CustomAppBar extends StatelessWidget {
 
@@ -118,7 +119,7 @@ class _CustomAppBarDesktop extends StatelessWidget {
                 IconButton(
                   onPressed: () => debugPrint("Search"), 
                   icon: const Icon(Icons.search_rounded),
-                  color: Colors.white,
+                  color: h1Color,
                   iconSize: 28,
                   padding: EdgeInsets.zero,
                 ),
@@ -133,14 +134,14 @@ class _CustomAppBarDesktop extends StatelessWidget {
                 IconButton(
                   onPressed: () => debugPrint("Card Gift"), 
                   icon: const Icon(Icons.card_giftcard_rounded),
-                  color: Colors.white,
+                  color: h1Color,
                   iconSize: 28,
                   padding: EdgeInsets.zero,
                 ),
                 IconButton(
                   onPressed: () => debugPrint("Notifications"), 
                   icon: const Icon(Icons.notifications_rounded),
-                  color: Colors.white,
+                  color: h1Color,
                   iconSize: 28,
                   padding: EdgeInsets.zero,
                 ),
@@ -170,7 +171,7 @@ class _AppBarButton extends StatelessWidget {
       child: Text(
         title, 
         style: const TextStyle(
-          color: Colors.white,
+          color: h1Color,
           fontSize: 18,
           fontWeight: FontWeight.w700
         ),

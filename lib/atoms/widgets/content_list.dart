@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:micro_app_netflix_clon/atoms/models/models.dart';
+import 'package:micro_app_netflix_clon/foundations/colors_foundation.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ContentList extends StatelessWidget {
@@ -31,7 +32,7 @@ class ContentList extends StatelessWidget {
             child: Text(
               title,
               style: styleTitle ?? const TextStyle(
-                color: Colors.white,
+                color: h1Color,
                 fontSize: 20,
                 fontWeight: FontWeight.bold
               ),
